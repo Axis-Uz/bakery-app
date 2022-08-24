@@ -1,0 +1,32 @@
+<app-navbar2></app-navbar2>
+
+
+<div class="card" *ngIf = "meal">
+<section class="product">
+	<div class="product__photo">
+		<div class="photo-container">
+			<div class="photo-main">
+				<img src= {{meal.image}} width="500px" height="404px" alt="green apple slice">
+			</div>
+		</div>
+	</div>
+	<div class="product__info">
+		<div class="title">
+			<h1> {{ meal.name }} </h1>
+			<span>Tout de Sweet - The Patisserie </span>
+		</div>
+		<div class="price">
+			<span>{{meal.price}}</span>
+		</div>
+		
+		<div class="description">
+			<h3>DESCRIPTION</h3>
+            <p>{{meal.description}}</p>
+			
+		</div>
+		<button type="button" (click)="addToCart(meal)" class="buy--btn">ADD TO CART</button>
+	</div>
+</section>
+</div>
+<router-outlet></router-outlet>
+

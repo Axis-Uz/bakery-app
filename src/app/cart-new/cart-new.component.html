@@ -1,0 +1,25 @@
+<app-navbar2></app-navbar2>
+<h3>Cart</h3>
+
+<section class="meals"> 
+  <div class="card">
+    <ul>
+      <li class="cart-item" *ngFor="let item of items">
+        <div>
+          <span>
+            <h3>
+
+            {{ item.name }}
+          </h3>
+        </span> 
+        <span class="price">{{ item.price }}</span>
+        </div>
+      </li>
+    </ul>
+</div>
+
+</section>
+<button type="button"  class="buy--btn" (click)="navigate();">Checkout</button>
+
+
+
